@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chandra Studio</title>
+    <!-- <meta name="description" content="Professional Photography Studio - Capturing moments that last a lifetime" />
+    <meta name="author" content="Lumina Studio" />
+
+    <meta property="og:title" content="Lumina Photography Studio" />
+    <meta property="og:description" content="Professional Photography Studio - Capturing moments that last a lifetime" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" /> -->
+
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="min-h-screen">
+      <!-- Navbar -->
+      <header
+        id="navbar"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-6 bg-transparent"
+      >
+        <div
+          id="navbarstudio"
+          class="container mx-auto px-4 md:px-6 flex items-center justify-between"
+        >
+          <a id="LogoStudio" href="#" class="text-2xl font-serif font-semibold">
+            Chandra's <span>Portfolio</span>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center space-x-8">
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden text-xl" id="menuToggle">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class="lucide lucide-menu"
+              >
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+              </svg>
+            </div>
+          </button>
+
+          <!-- Mobile Menu -->
+          <div
+            id="mobileMenu"
+            class="md:hidden bg-white/95 backdrop-blur-md shadow-md py-4 hidden"
+          >
+            <nav class="flex flex-col items-center space-y-4">
+              <a href="#home" class="font-medium text-base">Home</a>
+              <a href="#gallery" class="font-medium text-base">Gallery</a>
+              <a href="#about" class="font-medium text-base">About</a>
+              <a href="#services" class="font-medium text-base">Services</a>
+              <a href="#contact" class="font-medium text-base">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- Hero Section -->
+        <section
+          id="home"
+          class="relative min-h-screen flex items-center justify-center bg-white text-white overflow-hidden"
+        >
+          <!-- Content -->
+          <div
+            id="home_matter"
+            class="container mx-auto px-4 md:px-6 relative z-20 pt-28"
+          >
+            <div id="text_container" class="max-w-3xl">
+              <h2
+                id="h2_logo"
+                class="hero-text text-base md:text-lg uppercase tracking-[0.2em] mb-3 opacity-0 text-black"
+              >
+                Chandra Studio
+              </h2>
+              <p
+                class="hero-desc text-lg md:text-xl text-black max-w-2xl mb-8 opacity-0"
+              >
+                Professional photography that tells your unique story through
+                the art of visual storytelling.lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Quisquam Lorem ipsum, dolor sit
+                amet consectetur adipisicing elit. Quisquam architecto rem quod
+                distinctio aliquid inventore iure illo sint necessitatibus?
+                Dicta esse laboriosam totam nihil nostrum quasi! Excepturi omnis
+                rem iusto. lore
+              </p>
+              <div class="hero-buttons flex flex-wrap gap-4 opacity-0">
+                <button id="btn_home">Book a Session</button>
+                <button id="btn_home" onclick="scrollToGallery()">
+                  View Gallery
+                </button>
+              </div>
+            </div>
+            <div class="photo_auditory_logo">
+              <div class="container_img">
+                <img src="./Images/home.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Scroll Indicator -->
+          <div
+            id="button_bottom"
+            class="left-1/2 transform -translate-x-1/2 z-20"
+          >
+            <button
+              onclick="scrollToGallery()"
+              id="text_scroll"
+              class="hero-scroll flex flex-col items-center space-y-2 text-white/80 transition-colors duration-300 opacity-0"
+            >
+              <span class="text-xs uppercase tracking-wider">Scroll</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-down animate-bounce"
+              >
+                <path d="M12 5v14" />
+                <path d="m19 12-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="reveal-container py-20 md:py-28">
+          <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+              <h2 class="text-3xl md:text-4xl font-serif mb-4">
+                Our Photography Portfolio
+              </h2>
+              <p class="text-gray-600">
+                Explore our diverse collection of professional photography
+                across various genres and styles.
+              </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div
+              id="btns_section_div"
+              class="flex flex-wrap justify-center gap-2 mb-10"
+            >
+              <button
+                class="filter-btn active px-4 py-2 rounded-full text-sm transition-colors bg-black text-white"
+                data-filter="All"
+              >
+                All
+              </button>
+              <button
+                class="filter-btn px-4 py-2 rounded-full text-sm transition-colors bg-gray-100 hover:bg-gray-200"
+                data-filter="Engagement"
+              >
+                Engagement
+              </button>
+              <button
+                class="filter-btn px-4 py-2 rounded-full text-sm transition-colors bg-gray-100 hover:bg-gray-200"
+                data-filter="Wedding"
+              >
+                Wedding
+              </button>
+              <button
+                class="filter-btn px-4 py-2 rounded-full text-sm transition-colors bg-gray-100 hover:bg-gray-200"
+                data-filter="Birthdays"
+              >
+                Birthdays
+              </button>
+              <button
+                class="filter-btn px-4 py-2 rounded-full text-sm transition-colors bg-gray-100 hover:bg-gray-200"
+                data-filter="HalfSAree"
+              >
+                Half Saree
+              </button>
+              <button
+                class="filter-btn px-4 py-2 rounded-full text-sm transition-colors bg-gray-100 hover:bg-gray-200"
+                data-filter="Commercial"
+              >
+                House Warming
+              </button>
+              <button
+                class="filter-btn px-4 py-2 rounded-full text-sm transition-colors bg-gray-100 hover:bg-gray-200"
+                data-filter="Commercial"
+              >
+                Videos
+              </button>
+              <button
+                class="filter-btn px-4 py-2 rounded-full text-sm transition-colors bg-gray-100 hover:bg-gray-200"
+                data-filter="Commercial"
+              >
+                LED Walls
+              </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div
+              id="gallery-grid"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              <div
+                class="gallery-item aspect-[4/5] overflow-hidden"
+                data-category="Engagement"
+              >
+                <div class="image-container">
+                  <img
+                    src="./Images/ENGAGMENT/Engagement/1.jpg"
+                    alt="Foggy mountain summit"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                  <img
+                    src="./Images/ENGAGMENT/Engagement/2.jpg"
+                    alt="Foggy mountain summit"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                  <img
+                    src="./Images/ENGAGMENT/Engagement/3.jpg"
+                    alt="Foggy mountain summit"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                  <img
+                    src="./Images/ENGAGMENT/Engagement/4.jpg"
+                    alt="Foggy mountain summit"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                  <img
+                    src="./Images/ENGAGMENT/Engagement/5.jpg"
+                    alt="Foggy mountain summit"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                  <img
+                    src="./Images/ENGAGMENT/Engagement/6.jpg"
+                    alt="Foggy mountain summit"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-500">Engagement</p>
+                </div>
+              </div>
+              <div
+                id="img_head"
+                class="gallery-item aspect-[4/5] overflow-hidden"
+                data-category="Wedding"
+              >
+                <div class="image-container">
+                  <img
+                    src="./Images/ENGAGMENT/Wedding/1.jpg"
+                    alt="Studio portrait of a woman"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                  <img
+                    src="./Images/ENGAGMENT/Wedding/2.jpg"
+                    alt="Studio portrait of a woman"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                  <img
+                    src="./Images/ENGAGMENT/Wedding/3.jpg"
+                    alt="Studio portrait of a woman"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                  <img
+                    src="./Images/ENGAGMENT/Wedding/4.jpg"
+                    alt="Studio portrait of a woman"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                  <img
+                    src="./Images/ENGAGMENT/Wedding/5.jpg"
+                    alt="Studio portrait of a woman"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                  <img
+                    src="./Images/ENGAGMENT/Wedding/6.jpg"
+                    alt="Studio portrait of a woman"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-500">Wedding</p>
+                </div>
+              </div>
+              <div
+                class="gallery-item aspect-[4/5] overflow-hidden"
+                data-category="Birthdays"
+              >
+                <div class="image-container">
+                  <img
+                    src="./Images/ENGAGMENT/Birthdays/1.jpg"
+                    alt="Body of water surrounded by trees"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                  <img
+                    src="./Images/ENGAGMENT/Birthdays/2.jpg"
+                    alt="Body of water surrounded by trees"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                  <img
+                    src="./Images/ENGAGMENT/Birthdays/4.jpg"
+                    alt="Body of water surrounded by trees"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-500">Birthdays</p>
+                </div>
+              </div>
+              <div
+                class="gallery-item aspect-[4/5] overflow-hidden"
+                data-category="HalfSAree"
+              >
+                <div class="image-container">
+                  <img
+                    src="./Images/ENGAGMENT/HalfSaree/1.jpg"
+                    alt="Humpback whale jumping on sea"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                  <img
+                  src="./Images/ENGAGMENT/HalfSaree/2.jpg"
+                  alt="Humpback whale jumping on sea"
+                  class="hover-scale w-full h-full object-cover"
+                />
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-500">Half Saree</p>
+                </div>
+              </div>
+              <!-- <div
+                class="gallery-item aspect-[4/5] overflow-hidden"
+                data-category="Commercial"
+              >
+                <div class="image-container">
+                  <img
+                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+                    alt="Computer setup on desk"
+                    class="hover-scale w-full h-full object-cover"
+                  />
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-500">Commercial</p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="reveal-container py-20 md:py-28 bg-gray-50">
+          <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <!-- Image -->
+              <div class="about-image">
+                <div class="image-cc">
+                  <img
+                  id="aboutimg_Section"
+                    src="./Images/aboutplace.jpg"
+                    alt="Photographer in studio"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div>
+                <h3
+                  class="about-subtitle text-sm uppercase tracking-wider mb-2 text-gray-500"
+                >
+                  About Our Studio
+                </h3>
+                <h2 class="about-title text-3xl md:text-4xl font-serif mb-6">
+                  The Story Behind Chandra's Studio
+                </h2>
+                <div class="about-text space-y-4">
+                  <p>
+                    Founded in November 2003, Chandra Photography Studio has been capturing timeless moments with precision, passion, and a keen artistic eye for over two decades. With a strong commitment to excellence and creativity, Chandra has built a trusted reputation for delivering high-quality photography services across a wide range of genres—including portraits, weddings, commercial, and fine art photography.
+
+                  </p>
+                  <p>
+                    At the heart of the studio is a belief in storytelling through imagery. Every photograph is carefully crafted to reflect the personality, emotion, and essence of the subject.                 With years of experience and a loyal client base, Chandra Photography Studio continues to evolve—embracing new techniques and technologies while maintaining a timeless, authentic approach to visual storytelling.
+                  </p>
+                </div>
+
+                <div class="about-stats mt-8 space-y-6">
+                  <div class="flex items-center space-x-6">
+                    <div class="text-center">
+                      <div class="text-3xl font-bold">23+</div>
+                      <div class="text-gray-500 text-sm">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                      <div class="text-3xl font-bold">5000+</div>
+                      <div class="text-gray-500 text-sm">Happy Clients</div>
+                    </div>
+                    <!-- <div class="text-center">
+                      <div class="text-3xl font-bold">15</div>
+                      <div class="text-gray-500 text-sm">Awards Won</div>
+                    </div> -->
+                  </div>
+
+                  <button
+                    class="bg-black hover:bg-gray-800 text-white rounded-none px-8 py-3"
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="reveal-container py-20 md:py-28">
+          <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+              <h3 class="text-sm uppercase tracking-wider mb-2 text-gray-500">
+                Our Expertise
+              </h3>
+              <h2 class="text-3xl md:text-4xl font-serif mb-4">
+                Photography Services
+              </h2>
+              <p class="text-gray-600">
+                We offer a comprehensive range of professional photography
+                services tailored to meet your specific needs.
+              </p>
+            </div>
+
+            <div
+              id="services-grid"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+            >
+              <!-- Service items will be added by JavaScript -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section
+          id="contact"
+          class="reveal-container py-20 md:py-28 bg-black text-white"
+        >
+          <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <!-- Contact Info -->
+              <div>
+                <h3 class="text-sm uppercase tracking-wider mb-2 text-gray-400">
+                  Get In Touch
+                </h3>
+                <h2 class="text-3xl md:text-4xl font-serif mb-6">
+                  Let's Create Something Amazing Together
+                </h2>
+                <p class="text-gray-400 mb-8">
+                  Whether you have a project in mind or just want to chat about
+                  photography, we'd love to hear from you.
+                </p>
+
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-lg font-medium mb-2">Visit Our Studio</h4>
+                    <address class="not-italic text-gray-400">
+                      123 Photo Street<br />
+                      New York, NY 10001
+                    </address>
+                  </div>
+
+                  <div>
+                    <h4 class="text-lg font-medium mb-2">
+                      Contact Information
+                    </h4>
+                    <p class="text-gray-400">Email: info@lumina.studio</p>
+                    <p class="text-gray-400">Phone: (555) 123-4567</p>
+                  </div>
+
+                  <div>
+                    <h4 class="text-lg font-medium mb-2">Working Hours</h4>
+                    <p class="text-gray-400">Monday - Friday: 9am - 6pm</p>
+                    <p class="text-gray-400">Saturday: 10am - 4pm</p>
+                    <p class="text-gray-400">Sunday: Closed</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Form -->
+              <div>
+                <form id="contactForm" class="space-y-6">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label for="name" class="block mb-2 text-sm">Name</label>
+                      <input
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                        class="w-full px-3 py-2 bg-white/10 border border-gray-700 text-white placeholder:text-gray-500"
+                      />
+                    </div>
+                    <div>
+                      <label for="email" class="block mb-2 text-sm"
+                        >Email</label
+                      >
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Your email"
+                        required
+                        class="w-full px-3 py-2 bg-white/10 border border-gray-700 text-white placeholder:text-gray-500"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="subject" class="block mb-2 text-sm"
+                      >Subject</label
+                    >
+                    <input
+                      id="subject"
+                      name="subject"
+                      placeholder="How can we help?"
+                      required
+                      class="w-full px-3 py-2 bg-white/10 border border-gray-700 text-white placeholder:text-gray-500"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="message" class="block mb-2 text-sm"
+                      >Message</label
+                    >
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Tell us about your project..."
+                      rows="5"
+                      required
+                      class="w-full px-3 py-2 bg-white/10 border border-gray-700 text-white placeholder:text-gray-500 resize-none"
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="w-full bg-white text-black hover:bg-gray-200 py-6"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-black text-white py-16">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <!-- Brand -->
+            <div>
+              <h3 class="text-2xl font-serif mb-4">LUMINA</h3>
+              <p class="text-gray-400 mb-4">
+                Capturing moments that last a lifetime. Professional photography
+                studio based in New York.
+              </p>
+              <div class="flex space-x-4">
+                <a href="#" class="hover:text-gray-300 transition-colors">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                </a>
+                <a href="#" class="hover:text-gray-300 transition-colors">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="hover:text-gray-300 transition-colors">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+              <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#home"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#gallery"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Gallery</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Services -->
+            <div>
+              <h4 class="text-lg font-semibold mb-4">Services</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Portrait Photography</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Wedding Photography</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Commercial Photography</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Event Coverage</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Photo Editing</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+              <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+              <address class="not-italic text-gray-400 space-y-2">
+                <p>123 Photo Street</p>
+                <p>New York, NY 10001</p>
+                <p>Email: info@lumina.studio</p>
+                <p>Phone: (555) 123-4567</p>
+              </address>
+            </div>
+          </div>
+
+          <div
+            class="mt-12 pt-6 border-t border-gray-800 text-center text-gray-500 text-sm"
+          >
+            <p>
+              © <span id="current-year"></span> Lumina Photography Studio. All
+              rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Toast notification container -->
+    <div id="toast-container" class="fixed top-4 right-4 z-50"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
